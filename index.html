@@ -393,6 +393,109 @@
 </head>
 <body>
 
+  <!-- ── Passphrase Gate ── -->
+  <div id="meadow-gate" style="
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #FAF6EE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    font-family: 'DM Sans', sans-serif;
+    padding: 2rem;
+    text-align: center;
+  ">
+    <div style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(2.8rem,8vw,5rem);font-weight:300;color:#5C4A32;line-height:1.05;">
+      the <span style="color:#C17A5A;">Meadow</span>
+    </div>
+    <div style="font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:#6B7C5C;">
+      ✦ A self-care toolkit
+    </div>
+    <input id="gate-input" type="password"
+      placeholder="enter passphrase"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      style="
+        margin-top: 1rem;
+        padding: 0.85rem 1.4rem;
+        border: 1.5px solid #E4D5BE;
+        border-radius: 100px;
+        background: #F2E8D5;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        color: #5C4A32;
+        outline: none;
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
+        transition: border-color 0.2s;
+      "
+    />
+    <div id="gate-error" style="
+      font-size:0.82rem;
+      color:#C17A5A;
+      min-height:1.2em;
+      opacity:0;
+      transition:opacity 0.3s;
+    ">That's not quite right — try again.</div>
+    <button onclick="checkPassphrase()" style="
+      background: #C17A5A;
+      color: #fff;
+      border: none;
+      border-radius: 100px;
+      padding: 0.85rem 2.2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(193,122,90,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+      Enter
+    </button>
+  </div>
+
+  <script>
+    // Check session so passphrase isn't needed every page load
+    if (sessionStorage.getItem('meadow-access') === 'true') {
+      document.getElementById('meadow-gate').style.display = 'none';
+    }
+
+    document.getElementById('gate-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') checkPassphrase();
+    });
+
+    document.getElementById('gate-input').addEventListener('focus', function() {
+      this.style.borderColor = '#C17A5A';
+    });
+    document.getElementById('gate-input').addEventListener('blur', function() {
+      this.style.borderColor = '#E4D5BE';
+    });
+
+    function checkPassphrase() {
+      const val = document.getElementById('gate-input').value.trim().toLowerCase();
+      const err = document.getElementById('gate-error');
+      if (val === 'intention') {
+        sessionStorage.setItem('meadow-access', 'true');
+        const gate = document.getElementById('meadow-gate');
+        gate.style.transition = 'opacity 0.5s';
+        gate.style.opacity = '0';
+        setTimeout(() => gate.style.display = 'none', 500);
+      } else {
+        err.style.opacity = '1';
+        document.getElementById('gate-input').value = '';
+        document.getElementById('gate-input').focus();
+        setTimeout(() => err.style.opacity = '0', 3000);
+      }
+    }
+  </script>
+
+
   <!-- Toggle -->
   <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
     <span class="toggle-icon">☀️</span>
@@ -548,20 +651,5 @@
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
   </script>
-if (savedCode) {
-    initApp(savedCode);
-  }
-</script>
-
-<style>
-  #meadow-nav {
-  ...
-</style>
-<nav id="meadow-nav">
-  ...
-</nav>
-
-</body>
-</html>  
 </body>
 </html>
