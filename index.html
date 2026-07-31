@@ -11,50 +11,50 @@
 
     /* ── LIGHT MODE ── */
     :root, [data-theme="light"] {
-      --bg:         #FAF6EE;
-      --bg-warm:    #F2E8D5;
-      --bark:       #5C4A32;
-      --moss:       #6B7C5C;
-      --terracotta: #C17A5A;
-      --honey:      #E8A84C;
-      --blush:      #E8C4B0;
-      --sky:        #A8C4C8;
-      --text:       #3A2E22;
-      --muted:      #8C7B68;
-      --border:     #E4D5BE;
-      --card-plan-bg:    #FDF0E2;
-      --card-plan-bdr:   #F0D9BC;
-      --card-enough-bg:  #ECF3EA;
-      --card-enough-bdr: #C5D9BF;
-      --card-pause-bg:   #EAF0F5;
-      --card-pause-bdr:  #BECEDD;
+      --bg:         #0a1628;
+      --bg-warm:    #0f2240;
+      --bark:       #e8f0f7;
+      --moss:       #4a7a99;
+      --terracotta: #7eb8d4;
+      --honey:      #1a3a5c;
+      --blush:      #c5d8e8;
+      --sky:        #4a7a99;
+      --text:       #e8f0f7;
+      --muted:      #8fb3cc;
+      --border:     #1a3a5c;
+      --card-plan-bg:    #0a1628;
+      --card-plan-bdr:   #0f2240;
+      --card-enough-bg:  #e8f0f7;
+      --card-enough-bdr: #c5d8e8;
+      --card-pause-bg:   #e8f0f7;
+      --card-pause-bdr:  #c5d8e8;
       --toggle-bg:  rgba(107,124,92,0.12);
       --toggle-bdr: rgba(107,124,92,0.28);
-      --about-quote: #5C4A32;
+      --about-quote: #e8f0f7;
     }
 
     /* ── DARK MODE ── */
     [data-theme="dark"] {
-      --bg:         #1C1812;
-      --bg-warm:    #231E16;
-      --bark:       #E8D5BC;
-      --moss:       #8FAF80;
-      --terracotta: #D4916E;
-      --honey:      #E8B45C;
-      --blush:      #C49080;
-      --sky:        #7AAAB4;
-      --text:       #EDE0CE;
-      --muted:      #A0907C;
-      --border:     #3A3020;
-      --card-plan-bg:    #2A2016;
-      --card-plan-bdr:   #4A3820;
-      --card-enough-bg:  #1C261A;
-      --card-enough-bdr: #2E4228;
-      --card-pause-bg:   #182028;
-      --card-pause-bdr:  #243040;
+      --bg:         #080f1e;
+      --bg-warm:    #0a1628;
+      --bark:       #1a3a5c;
+      --moss:       #8fb3cc;
+      --terracotta: #c5d8e8;
+      --honey:      #c5d8e8;
+      --blush:      #8fb3cc;
+      --sky:        #7eb8d4;
+      --text:       #0f2240;
+      --muted:      #8fb3cc;
+      --border:     #0d1e38;
+      --card-plan-bg:    #0a1628;
+      --card-plan-bdr:   #0f2240;
+      --card-enough-bg:  #0a1628;
+      --card-enough-bdr: #1a3a5c;
+      --card-pause-bg:   #0a1628;
+      --card-pause-bdr:  #0f2240;
       --toggle-bg:  rgba(143,175,128,0.12);
       --toggle-bdr: rgba(143,175,128,0.28);
-      --about-quote: #D4C4A8;
+      --about-quote: #c5d8e8;
     }
 
     html { scroll-behavior: smooth; }
@@ -258,21 +258,21 @@
       font-family: 'Fraunces', serif;
       font-size: 1.85rem; font-weight: 500; line-height: 1.1;
     }
-    .card-plan   .card-name { color: #9A6830; }
-    .card-enough .card-name { color: #4A7840; }
-    .card-pause  .card-name { color: #346880; }
-    [data-theme="dark"] .card-plan   .card-name { color: #D4A060; }
-    [data-theme="dark"] .card-enough .card-name { color: #80B870; }
-    [data-theme="dark"] .card-pause  .card-name { color: #70B0C8; }
+    .card-plan   .card-name { color: #4a7a99; }
+    .card-enough .card-name { color: #1a3a5c; }
+    .card-pause  .card-name { color: #1a3a5c; }
+    [data-theme="dark"] .card-plan   .card-name { color: #c5d8e8; }
+    [data-theme="dark"] .card-enough .card-name { color: #8fb3cc; }
+    [data-theme="dark"] .card-pause  .card-name { color: #7eb8d4; }
 
     .card-tagline {
       font-size: 0.75rem; font-weight: 500;
       letter-spacing: 0.16em; text-transform: uppercase;
       margin-bottom: 0.2rem;
     }
-    .card-plan   .card-tagline { color: #C48A20; }
-    .card-enough .card-tagline { color: #5A7C54; }
-    .card-pause  .card-tagline { color: #5490A0; }
+    .card-plan   .card-tagline { color: #8fb3cc; }
+    .card-enough .card-tagline { color: #1a3a5c; }
+    .card-pause  .card-tagline { color: #4a7a99; }
 
     .card-desc {
       font-size: 1rem; font-weight: 300;
@@ -285,12 +285,12 @@
       margin-top: 0.2rem; text-decoration: none;
       transition: gap 0.22s;
     }
-    .card-plan   .card-link { color: #B06A30; }
-    .card-enough .card-link { color: #426E3C; }
-    .card-pause  .card-link { color: #326878; }
-    [data-theme="dark"] .card-plan   .card-link { color: #D4906A; }
-    [data-theme="dark"] .card-enough .card-link { color: #72A868; }
-    [data-theme="dark"] .card-pause  .card-link { color: #60A0B8; }
+    .card-plan   .card-link { color: #4a7a99; }
+    .card-enough .card-link { color: #1a3a5c; }
+    .card-pause  .card-link { color: #1a3a5c; }
+    [data-theme="dark"] .card-plan   .card-link { color: #c5d8e8; }
+    [data-theme="dark"] .card-enough .card-link { color: #8fb3cc; }
+    [data-theme="dark"] .card-pause  .card-link { color: #7eb8d4; }
     .app-card:hover .card-link { gap: 0.75rem; }
 
     .card-deco {
@@ -301,16 +301,16 @@
     .card-plan   .card-deco { background: var(--honey); }
     .card-enough .card-deco { background: var(--moss); }
     .card-pause  .card-deco { background: var(--sky); }
-    .card-letters { background: #FAE8ED; border: 1.5px solid #F0C4D0; }
+    .card-letters { background: #0a1628; border: 1.5px solid #c5d8e8; }
     .card-letters .card-icon { background: rgba(220,140,160,0.18); }
-    .card-letters .card-name { color: #7A2840; }
-    .card-letters .card-tagline { color: #C06080; }
-    .card-letters .card-link { color: #A03858; }
-    [data-theme="dark"] .card-letters { background: #2A1820; border-color: #4A2830; }
-    [data-theme="dark"] .card-letters .card-name { color: #E8A0B8; }
-    [data-theme="dark"] .card-letters .card-tagline { color: #C07890; }
-    [data-theme="dark"] .card-letters .card-link { color: #D890A8; }
-    .card-letters .card-deco { background: #E8A0B8; }
+    .card-letters .card-name { color: #1a3a5c; }
+    .card-letters .card-tagline { color: #4a7a99; }
+    .card-letters .card-link { color: #4a7a99; }
+    [data-theme="dark"] .card-letters { background: #0a1628; border-color: #0f2240; }
+    [data-theme="dark"] .card-letters .card-name { color: #c5d8e8; }
+    [data-theme="dark"] .card-letters .card-tagline { color: #4a7a99; }
+    [data-theme="dark"] .card-letters .card-link { color: #c5d8e8; }
+    .card-letters .card-deco { background: #c5d8e8; }
 
     /* ── ABOUT SECTION ── */
     .about-section {
@@ -404,20 +404,20 @@
 <body>
 
  <!-- ── Passphrase Gate ── -->
-<div id="meadow-gate" style="position:fixed;inset:0;z-index:99999;background:#FAF6EE;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;font-family:'DM Sans',sans-serif;padding:2rem;text-align:center;">
-  <div style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(2.8rem,8vw,5rem);font-weight:300;color:#5C4A32;line-height:1.05;">
-    the <span style="color:#C17A5A;">Meadow</span>
+<div id="meadow-gate" style="position:fixed;inset:0;z-index:99999;background:#0a1628;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;font-family:'DM Sans',sans-serif;padding:2rem;text-align:center;">
+  <div style="font-family:'Fraunces',serif;font-style:italic;font-size:clamp(2.8rem,8vw,5rem);font-weight:300;color:#e8f0f7;line-height:1.05;">
+    the <span style="color:#7eb8d4;">Meadow</span>
   </div>
-  <div style="font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:#6B7C5C;">✦ A quiet corner of the internet</div>
+  <div style="font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:#4a7a99;">✦ A quiet corner of the internet</div>
   <div style="max-width:380px;margin-top:0.4rem;">
-    <p style="font-size:0.95rem;font-weight:300;color:#8C7B68;line-height:1.75;margin-bottom:0.75rem;">A small suite of self-care apps, built by one person for their own life — and shared carefully with others. Nothing polished, nothing monetized. Just tools that work.</p>
-    <p style="font-size:0.95rem;font-weight:300;color:#8C7B68;line-height:1.75;">If you've found your way here, welcome. These apps are invite-only for now — reach out at <a href="mailto:bc@runawayanchor.com" style="color:#C17A5A;text-decoration:none;border-bottom:1px solid rgba(193,122,90,0.35);">bc@runawayanchor.com</a> if you'd like access.</p>
+    <p style="font-size:0.95rem;font-weight:300;color:#8fb3cc;line-height:1.75;margin-bottom:0.75rem;">A small suite of self-care apps, built by one person for their own life — and shared carefully with others. Nothing polished, nothing monetized. Just tools that work.</p>
+    <p style="font-size:0.95rem;font-weight:300;color:#8fb3cc;line-height:1.75;">If you've found your way here, welcome. These apps are invite-only for now — reach out at <a href="mailto:bc@runawayanchor.com" style="color:#7eb8d4;text-decoration:none;border-bottom:1px solid rgba(126,184,212,0.35);">bc@runawayanchor.com</a> if you'd like access.</p>
   </div>
-  <div style="width:100%;max-width:340px;height:1px;background:#E4D5BE;margin:0.2rem 0;"></div>
-  <div style="font-size:0.8rem;font-weight:500;letter-spacing:0.1em;color:#8C7B68;">Already have a passphrase?</div>
-  <input id="gate-input" type="password" placeholder="enter passphrase" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="padding:0.85rem 1.4rem;border:1.5px solid #E4D5BE;border-radius:100px;background:#F2E8D5;font-family:'DM Sans',sans-serif;font-size:1rem;color:#5C4A32;outline:none;text-align:center;width:100%;max-width:280px;transition:border-color 0.2s;" />
-  <div id="gate-error" style="font-size:0.82rem;color:#C17A5A;min-height:1.2em;opacity:0;transition:opacity 0.3s;">That's not quite right — try again.</div>
-  <button onclick="checkPassphrase()" style="background:#C17A5A;color:#fff;border:none;border-radius:100px;padding:0.85rem 2.2rem;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;cursor:pointer;box-shadow:0 4px 18px rgba(193,122,90,0.3);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">Enter</button>
+  <div style="width:100%;max-width:340px;height:1px;background:#1a3a5c;margin:0.2rem 0;"></div>
+  <div style="font-size:0.8rem;font-weight:500;letter-spacing:0.1em;color:#8fb3cc;">Already have a passphrase?</div>
+  <input id="gate-input" type="password" placeholder="enter passphrase" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="padding:0.85rem 1.4rem;border:1.5px solid #1a3a5c;border-radius:100px;background:#0f2240;font-family:'DM Sans',sans-serif;font-size:1rem;color:#e8f0f7;outline:none;text-align:center;width:100%;max-width:280px;transition:border-color 0.2s;" />
+  <div id="gate-error" style="font-size:0.82rem;color:#7eb8d4;min-height:1.2em;opacity:0;transition:opacity 0.3s;">That's not quite right — try again.</div>
+  <button onclick="checkPassphrase()" style="background:#7eb8d4;color:#fff;border:none;border-radius:100px;padding:0.85rem 2.2rem;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;cursor:pointer;box-shadow:0 4px 18px rgba(126,184,212,0.3);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">Enter</button>
 </div>
 
   <script>
@@ -431,10 +431,10 @@
     });
 
     document.getElementById('gate-input').addEventListener('focus', function() {
-      this.style.borderColor = '#C17A5A';
+      this.style.borderColor = '#7eb8d4';
     });
     document.getElementById('gate-input').addEventListener('blur', function() {
-      this.style.borderColor = '#E4D5BE';
+      this.style.borderColor = '#1a3a5c';
     });
 
     function checkPassphrase() {
