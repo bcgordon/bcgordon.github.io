@@ -22,12 +22,12 @@
       --text:       #e8f0f7;
       --muted:      #8fb3cc;
       --border:     #1a3a5c;
-      --card-plan-bg:    #0a1628;
-      --card-plan-bdr:   #0f2240;
-      --card-enough-bg:  #e8f0f7;
-      --card-enough-bdr: #c5d8e8;
-      --card-pause-bg:   #e8f0f7;
-      --card-pause-bdr:  #c5d8e8;
+      --card-plan-bg:    #dbeafe;
+      --card-plan-bdr:   #93c5fd;
+      --card-enough-bg:  #d1fae5;
+      --card-enough-bdr: #6ee7b7;
+      --card-pause-bg:   #ede9fe;
+      --card-pause-bdr:  #c4b5fd;
       --toggle-bg:  rgba(107,124,92,0.12);
       --toggle-bdr: rgba(107,124,92,0.28);
       --about-quote: #e8f0f7;
@@ -37,21 +37,21 @@
     [data-theme="dark"] {
       --bg:         #080f1e;
       --bg-warm:    #0a1628;
-      --bark:       #1a3a5c;
-      --moss:       #8fb3cc;
-      --terracotta: #c5d8e8;
-      --honey:      #c5d8e8;
-      --blush:      #8fb3cc;
-      --sky:        #7eb8d4;
-      --text:       #0f2240;
-      --muted:      #8fb3cc;
-      --border:     #0d1e38;
-      --card-plan-bg:    #0a1628;
-      --card-plan-bdr:   #0f2240;
-      --card-enough-bg:  #0a1628;
-      --card-enough-bdr: #1a3a5c;
-      --card-pause-bg:   #0a1628;
-      --card-pause-bdr:  #0f2240;
+      --bark:       #e8f0f7;
+      --moss:       #7eb8d4;
+      --terracotta: #93c5fd;
+      --honey:      #fcd34d;
+      --blush:      #f9a8d4;
+      --sky:        #7dd3fc;
+      --text:       #e8f0f7;
+      --muted:      #94b8cc;
+      --border:     #1a3a5c;
+      --card-plan-bg:    #0d1f3c;
+      --card-plan-bdr:   #1e3a5f;
+      --card-enough-bg:  #0d2418;
+      --card-enough-bdr: #1a4030;
+      --card-pause-bg:   #1a1035;
+      --card-pause-bdr:  #2e1f5e;
       --toggle-bg:  rgba(143,175,128,0.12);
       --toggle-bdr: rgba(143,175,128,0.28);
       --about-quote: #c5d8e8;
@@ -258,26 +258,37 @@
       font-family: 'Fraunces', serif;
       font-size: 1.85rem; font-weight: 500; line-height: 1.1;
     }
-    .card-plan   .card-name { color: #4a7a99; }
-    .card-enough .card-name { color: #1a3a5c; }
-    .card-pause  .card-name { color: #1a3a5c; }
-    [data-theme="dark"] .card-plan   .card-name { color: #c5d8e8; }
-    [data-theme="dark"] .card-enough .card-name { color: #8fb3cc; }
-    [data-theme="dark"] .card-pause  .card-name { color: #7eb8d4; }
+    .card-plan   .card-name { color: #1e3a5f; }
+    .card-enough .card-name { color: #064e3b; }
+    .card-pause  .card-name { color: #3b0764; }
+    [data-theme="dark"] .card-plan   .card-name { color: #93c5fd; }
+    [data-theme="dark"] .card-enough .card-name { color: #6ee7b7; }
+    [data-theme="dark"] .card-pause  .card-name { color: #c4b5fd; }
 
     .card-tagline {
       font-size: 0.75rem; font-weight: 500;
       letter-spacing: 0.16em; text-transform: uppercase;
       margin-bottom: 0.2rem;
     }
-    .card-plan   .card-tagline { color: #8fb3cc; }
-    .card-enough .card-tagline { color: #1a3a5c; }
-    .card-pause  .card-tagline { color: #4a7a99; }
+    .card-plan   .card-tagline { color: #2d5082; }
+    .card-enough .card-tagline { color: #065f46; }
+    .card-pause  .card-tagline { color: #4c1d95; }
+    [data-theme="dark"] .card-plan   .card-tagline { color: #7eb8d4; }
+    [data-theme="dark"] .card-enough .card-tagline { color: #34d399; }
+    [data-theme="dark"] .card-pause  .card-tagline { color: #a78bfa; }
 
     .card-desc {
       font-size: 1rem; font-weight: 300;
       line-height: 1.72; color: var(--muted); flex: 1;
     }
+    .card-plan   .card-desc { color: #2d4a6e; }
+    .card-enough .card-desc { color: #065f46; }
+    .card-pause  .card-desc { color: #4c1d95; }
+    .card-letters .card-desc { color: #9d174d; }
+    [data-theme="dark"] .card-plan   .card-desc { color: #8fb3cc; }
+    [data-theme="dark"] .card-enough .card-desc { color: #6ee7b7; }
+    [data-theme="dark"] .card-pause  .card-desc { color: #a78bfa; }
+    [data-theme="dark"] .card-letters .card-desc { color: #f9a8d4; }
 
     .card-link {
       display: inline-flex; align-items: center; gap: 0.45rem;
@@ -285,12 +296,12 @@
       margin-top: 0.2rem; text-decoration: none;
       transition: gap 0.22s;
     }
-    .card-plan   .card-link { color: #4a7a99; }
-    .card-enough .card-link { color: #1a3a5c; }
-    .card-pause  .card-link { color: #1a3a5c; }
-    [data-theme="dark"] .card-plan   .card-link { color: #c5d8e8; }
-    [data-theme="dark"] .card-enough .card-link { color: #8fb3cc; }
-    [data-theme="dark"] .card-pause  .card-link { color: #7eb8d4; }
+    .card-plan   .card-link { color: #1e3a5f; }
+    .card-enough .card-link { color: #064e3b; }
+    .card-pause  .card-link { color: #3b0764; }
+    [data-theme="dark"] .card-plan   .card-link { color: #93c5fd; }
+    [data-theme="dark"] .card-enough .card-link { color: #6ee7b7; }
+    [data-theme="dark"] .card-pause  .card-link { color: #c4b5fd; }
     .app-card:hover .card-link { gap: 0.75rem; }
 
     .card-deco {
@@ -301,14 +312,15 @@
     .card-plan   .card-deco { background: var(--honey); }
     .card-enough .card-deco { background: var(--moss); }
     .card-pause  .card-deco { background: var(--sky); }
-    .card-letters { background: #0a1628; border: 1.5px solid #c5d8e8; }
-    .card-letters .card-icon { background: rgba(220,140,160,0.18); }
-    .card-letters .card-name { color: #1a3a5c; }
-    .card-letters .card-tagline { color: #4a7a99; }
-    .card-letters .card-link { color: #4a7a99; }
-    [data-theme="dark"] .card-letters { background: #0a1628; border-color: #0f2240; }
-    [data-theme="dark"] .card-letters .card-name { color: #c5d8e8; }
-    [data-theme="dark"] .card-letters .card-tagline { color: #4a7a99; }
+    .card-letters { background: #fce7f3; border: 1.5px solid #f9a8d4; }
+    .card-letters .card-icon { background: rgba(249,168,212,0.25); }
+    .card-letters .card-name { color: #831843; }
+    .card-letters .card-tagline { color: #9d174d; }
+    .card-letters .card-link { color: #831843; }
+    [data-theme="dark"] .card-letters { background: #2d0a1e; border-color: #5d1a38; }
+    [data-theme="dark"] .card-letters .card-name { color: #f9a8d4; }
+    [data-theme="dark"] .card-letters .card-tagline { color: #f472b6; }
+    [data-theme="dark"] .card-letters .card-link { color: #f9a8d4; }
     [data-theme="dark"] .card-letters .card-link { color: #c5d8e8; }
     .card-letters .card-deco { background: #c5d8e8; }
 
